@@ -1,0 +1,32 @@
+{% block head %}
+
+<title>Conversion Calculator</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content" style="width:400px; height:300px; border:1px solid black; padding:20px;">
+    <h1 style="text-align: center">Conversion Calculator</h1>
+
+    <div class="form">
+        <form action="/select_converter" method="POST">
+            <table>
+                <tr>
+                    <td colspan=2><center>Temprature</center></td>
+                </tr>
+                <tr>
+                    <td><center><input type="submit" value="Celcius to Fahrenheit" id="btn_ctof_choice" name="btn_choice"></center></td>
+                    <td><center><input type="submit" value="Fahrenheit to Celcius" id="btn_ftoc_choice" name="btn_choice"></center></td>
+                </tr>
+                <tr>
+                    <td colspan=2><center>Height</center></td>
+                </tr>
+                <tr>
+                    <td><center><input type="submit" value="Inches to Feet" id="btn_itof_choice" name="btn_choice"></center></td>
+                    <td><center><input type="submit" value="Feet to Inches" id="btn_ftoi_choice" name="btn_choice"></center></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+{% endblock %}

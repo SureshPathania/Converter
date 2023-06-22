@@ -1,0 +1,31 @@
+{% block head %}
+
+<title>Calculator</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content" style="width:400px; height:300px; border:1px solid black; padding:20px;">
+    <h1 style="text-align: center">Calculator</h1>
+
+    <div class="form">
+        <form action="/postman_action" method="POST">
+            <label for="num1">Enter first number : </label>
+            <input type="text" name="num1" id="num1"><br><br>
+
+            <label for="num2">Enter second number : </label>
+            <input type="text" name="num2" id="num2"><br><br>
+
+            <label for="operation">Choose a Mathematical Operation</label>
+            <select id="operation" name="operation">
+                <option value="add">add</option>
+                <option value="subtract">subtract</option>
+                <option value="multiply">multiply</option>
+                <option value="divide">divide</option>
+            </select><br><br>
+          
+            <center><input type="submit" value="Calculate Result"></center>
+        </form>
+    </div>
+</div>
+{% endblock %}

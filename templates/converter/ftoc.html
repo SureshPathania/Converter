@@ -1,0 +1,20 @@
+{% block head %}
+
+<title>Converter</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content" style="width:400px; height:300px; border:1px solid black; padding:20px;">
+    <h1 style="text-align: center">Converter</h1>
+
+    <div class="form">
+        <form action="/pman_ftoc" method="POST">
+            <label for="txt_fahrenheit">Enter temprature in fahrenheit : </label>
+            <input type="text" name="txt_fahrenheit" id="txt_fahrenheit"><br><br>
+
+            <center><input type="submit" value="Convert" id="btn_ftoc_submit"></center>
+        </form>
+    </div>
+</div>
+{% endblock %}
